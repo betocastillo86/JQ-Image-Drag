@@ -17,14 +17,15 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 
     <!-- add JQ Image Drag plugin -->
-    <script type="text/javascript" src="script/jquery.imagedrag.min.js"></script>
+    <script type="text/javascript" src="script/jquery.imagedrag.js"></script>
     <script type="text/javascript">
       $(function(){
 
         $('.wrap').imagedrag({
           input: "#output",
           position: "middle",
-          attribute: "html"
+          attribute: "html",
+		  target : "#imgWrap"
         });
 
       });
@@ -59,7 +60,7 @@
 
       <div class="jumbotron">
         <div class="wrap">
-          <img src="image.jpg" alt="JQ Image Drag" style="width:1024px; height:768px;"/>
+          <div id="imgWrap" alt="JQ Image Drag" style="width:1024px; height:768px;background-image:url(image.jpg)"></div>
         </div>
         <hr>
         <p class="lead" data-step="4" data-intro="Let's try it. It's free and open-source.">Allows images to be positioned using mouse drag just like Facebook cover pictures and thumbnails.</p>

@@ -19,8 +19,15 @@
 		
 		var elem;
 		function imageDrag(e,o){
+			
 			// Get required elements
-			var img = $('img', elem);
+			var img;
+			if(o.target)
+				img = $(o.target);
+			else
+				img = $('img', elem);
+			
+			
 			var input = $(o.input);
 
 			// Get wrapper WnH
